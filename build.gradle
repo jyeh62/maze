@@ -1,0 +1,10 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'MazeGenerator'
+
+run {
+    if(project.hasProperty('args')){
+        args project.args.split('\\s')
+    }
+}
